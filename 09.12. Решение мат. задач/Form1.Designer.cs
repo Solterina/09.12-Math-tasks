@@ -63,6 +63,7 @@
             btnSchedule.TabIndex = 2;
             btnSchedule.Text = "Построить график";
             btnSchedule.UseVisualStyleBackColor = true;
+            btnSchedule.Click += btnSchedule_Click;
             // 
             // Form_ex_sp
             // 

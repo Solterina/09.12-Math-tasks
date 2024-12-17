@@ -28,12 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             txtX = new Label();
             txtY = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            textX = new TextBox();
+            textY = new TextBox();
             button1 = new Button();
-            btnBack = new Button();
+            chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            ((System.ComponentModel.ISupportInitialize)chart).BeginInit();
             SuspendLayout();
             // 
             // txtX
@@ -58,19 +62,19 @@
             txtY.TabIndex = 1;
             txtY.Text = "Y";
             // 
-            // textBox1
+            // textX
             // 
-            textBox1.Location = new Point(80, 121);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 23);
-            textBox1.TabIndex = 2;
+            textX.Location = new Point(80, 121);
+            textX.Name = "textX";
+            textX.Size = new Size(125, 23);
+            textX.TabIndex = 2;
             // 
-            // textBox2
+            // textY
             // 
-            textBox2.Location = new Point(80, 187);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 23);
-            textBox2.TabIndex = 3;
+            textY.Location = new Point(80, 187);
+            textY.Name = "textY";
+            textY.Size = new Size(125, 23);
+            textY.TabIndex = 3;
             // 
             // button1
             // 
@@ -81,16 +85,23 @@
             button1.TabIndex = 4;
             button1.Text = "Построить";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
-            // btnBack
+            // chart
             // 
-            btnBack.Font = new Font("Trebuchet MS", 15.75F, FontStyle.Bold);
-            btnBack.Location = new Point(12, 12);
-            btnBack.Name = "btnBack";
-            btnBack.Size = new Size(124, 41);
-            btnBack.TabIndex = 5;
-            btnBack.Text = "Назад";
-            btnBack.UseVisualStyleBackColor = true;
+            chartArea1.Name = "ChartArea1";
+            chart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            chart.Legends.Add(legend1);
+            chart.Location = new Point(280, 38);
+            chart.Name = "chart";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            chart.Series.Add(series1);
+            chart.Size = new Size(300, 300);
+            chart.TabIndex = 6;
+            chart.Text = "chart1";
             // 
             // Schedule
             // 
@@ -98,14 +109,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.baee;
             ClientSize = new Size(669, 422);
-            Controls.Add(btnBack);
+            Controls.Add(chart);
             Controls.Add(button1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(textY);
+            Controls.Add(textX);
             Controls.Add(txtY);
             Controls.Add(txtX);
             Name = "Schedule";
             Text = "Schedule";
+            ((System.ComponentModel.ISupportInitialize)chart).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -114,9 +126,9 @@
 
         private Label txtX;
         private Label txtY;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox textX;
+        private TextBox textY;
         private Button button1;
-        private Button btnBack;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart;
     }
 }

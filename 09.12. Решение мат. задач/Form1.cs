@@ -34,5 +34,11 @@ namespace _09._12._Решение_мат._задач
                 MessageBox.Show("Выберите задачу из списка.");
             }
         }
+
+        private void btnSchedule_Click(object sender, EventArgs e)
+        {
+            var schudule = new Schedule();
+            schudule.Show();
+        }   
     }
 }
