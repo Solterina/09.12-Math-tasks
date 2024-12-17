@@ -64,16 +64,18 @@
             // 
             // textX
             // 
+            textX.Font = new Font("Trebuchet MS", 12.75F, FontStyle.Bold);
             textX.Location = new Point(80, 121);
             textX.Name = "textX";
-            textX.Size = new Size(125, 23);
+            textX.Size = new Size(125, 27);
             textX.TabIndex = 2;
             // 
             // textY
             // 
+            textY.Font = new Font("Trebuchet MS", 12.75F, FontStyle.Bold);
             textY.Location = new Point(80, 187);
             textY.Name = "textY";
-            textY.Size = new Size(125, 23);
+            textY.Size = new Size(125, 27);
             textY.TabIndex = 3;
             // 
             // button1
