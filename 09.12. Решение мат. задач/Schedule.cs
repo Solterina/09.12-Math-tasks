@@ -21,15 +21,22 @@ public partial class Schedule : Form
         InitializeComponent();
     }
 
-    private void button1_Click(object sender, EventArgs e)
+    private void btnLook_Click(object sender, EventArgs e)
     {
-        int x = int.Parse(textX.Text);
-        int y = int.Parse(textY.Text);
+        if (ScheduleTask != null)
+        {
+            int x = int.Parse(textX.Text);
+            int y = int.Parse(textY.Text);
 
-        chart.Series.Clear();
-        chart.Series.Add("Line");
-        chart.Series["Line"].Points.AddXY(0, 0);
-        chart.Series["Line"].Points.AddXY(x, y);
-        chart.Series["Line"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chart.Series.Clear();
+            chart.Series.Add("Line");
+            chart.Series["Line"].Points.AddXY(0, 0);
+            chart.Series["Line"].Points.AddXY(x, y);
+            chart.Series["Line"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+        }
+        else
+        {
+            MessageBox.Show("Заполнены не все поля.");
+        }
     }
 }

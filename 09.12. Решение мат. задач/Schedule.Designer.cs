@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             txtX = new Label();
             txtY = new Label();
             textX = new TextBox();
             textY = new TextBox();
-            button1 = new Button();
+            btnLook = new Button();
             chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)chart).BeginInit();
             SuspendLayout();
@@ -78,29 +78,29 @@
             textY.Size = new Size(125, 27);
             textY.TabIndex = 3;
             // 
-            // button1
+            // btnLook
             // 
-            button1.Font = new Font("Trebuchet MS", 12.75F, FontStyle.Bold);
-            button1.Location = new Point(45, 262);
-            button1.Name = "button1";
-            button1.Size = new Size(160, 29);
-            button1.TabIndex = 4;
-            button1.Text = "Построить";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnLook.Font = new Font("Trebuchet MS", 12.75F, FontStyle.Bold);
+            btnLook.Location = new Point(45, 262);
+            btnLook.Name = "btnLook";
+            btnLook.Size = new Size(160, 29);
+            btnLook.TabIndex = 4;
+            btnLook.Text = "Построить";
+            btnLook.UseVisualStyleBackColor = true;
+            btnLook.Click += btnLook_Click;
             // 
             // chart
             // 
-            chartArea1.Name = "ChartArea1";
-            chart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            chart.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            chart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            chart.Legends.Add(legend2);
             chart.Location = new Point(280, 38);
             chart.Name = "chart";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            chart.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            chart.Series.Add(series2);
             chart.Size = new Size(300, 300);
             chart.TabIndex = 6;
             chart.Text = "chart1";
@@ -112,7 +112,7 @@
             BackgroundImage = Properties.Resources.baee;
             ClientSize = new Size(669, 422);
             Controls.Add(chart);
-            Controls.Add(button1);
+            Controls.Add(btnLook);
             Controls.Add(textY);
             Controls.Add(textX);
             Controls.Add(txtY);
@@ -130,7 +130,7 @@
         private Label txtY;
         private TextBox textX;
         private TextBox textY;
-        private Button button1;
+        private Button btnLook;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart;
     }
 }
